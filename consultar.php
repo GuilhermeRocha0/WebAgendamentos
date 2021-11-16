@@ -21,6 +21,7 @@
          <title>Agendamento Web - Consultar</title>
     </head>
     <body>
+        <!-- Page Content -->
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -43,6 +44,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Consultar - Agendamento de Potenciais Clientes</h5>
                         <p class="card-title">Sistema utilizado para agendamento de serviços</p>
+                        <!-- Table -->
                         <table class="table table-responsive" style="width: auto;">
                             <thead>
                                 <tr>
@@ -67,13 +69,14 @@
                                     echo "<td>". date('d/m/Y', strtotime($data['data_contato']))."</td>";
                                     echo "<td>".$data['observacao']."</td>";
                                     echo "<td><a href='editar.php?id=$data[id]' class='btn btn-outline-primary' style='width: 72px'>Editar</a>";
-                                    echo "<td><a href='#' class='btn btn-outline-danger' style='width: 72px'>Excluir</a>";
+                                    echo "<td><a href='delete.php?id=$data[id]' class='btn btn-outline-danger' style='width: 72px'>Excluir</a>";
                                     echo "</tr>";
                                     }
                                 ?>
                             </tbody>
-
                         </table>
+                        <!-- End Table -->
+
                     </div>
                 </div>
             </div>
